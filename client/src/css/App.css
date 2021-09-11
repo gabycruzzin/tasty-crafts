@@ -1,0 +1,76 @@
+main {
+  background-color: pink;
+}
+
+.container {
+  padding: 2em; /* 2 x current font size (20px) = 40px padding all around */
+  max-width: 1200px; /* for big/tiny monitors; it will TRY to take up 1200px, but if it can't it'll be reduced */
+  margin: 0 auto; /* centered in page */
+}
+
+h1 {
+  font-family: letter-gothic-std, monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: letter-gothic-std, monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p,
+a {
+  font-family: letter-gothic-std, monospace;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+a:hover {
+  color: #ff47cb;
+}
+
+.quote {
+  border-left: white 5px solid;
+  padding-left: 1em;
+}
+
+img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+.logo {
+  width: 3em;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.flex-container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item-left {
+  padding: 1em;
+  flex: 50%;
+}
+
+.flex-item-right {
+  padding: 1em;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 1280px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
