@@ -1,33 +1,43 @@
-import "../css/AppNavbar.css";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
-export function AppNavbar() {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
+export default function AppNavbar() {
+  const classes = useStyles();
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div
-        className="collapse navbar-collapse"
-        id="navbarNavAltMarkup"
-        style={{ justifyContent: "center" }}
-      >
-        <div className="navbar-nav">
-          <a href="#" className="button button-font">
-            Products & Merchandise
-          </a>
-          <a href="#journey" className="button button-font">
-            Custom Services
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div className={classes.root}>
+      <AppBar position="fixed" color="transparent">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Tasty Crafts
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 }
