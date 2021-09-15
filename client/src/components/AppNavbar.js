@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontFamily: "learning-curve, sans-serif",
+    fontWeight: 400,
+    fontStyle: "normal",
+    fontSize: 28,
   },
 }));
 

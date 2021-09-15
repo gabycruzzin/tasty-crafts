@@ -7,10 +7,10 @@ export function Journey() {
         <div className="flex-item-left">
           <h1>header 1</h1>
           <h2>header 2</h2>
-          <p>paragraph</p>
+          <p>PARAGRAPH</p>
         </div>
         <div className="flex-item-right">
-          <img src={stickers} />
+          <img src={stickers} alt="sticker" />
         </div>
       </div>
     </>

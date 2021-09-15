@@ -9,28 +9,21 @@ main {
   margin: 0 auto; /* centered in page */
 }
 
-h1 {
-  font-family: letter-gothic-std, monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-h2 {
-  font-family: letter-gothic-std, monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-p,
 a {
-  font-family: letter-gothic-std, monospace;
-  font-weight: 700;
-  font-style: normal;
+  text-decoration: none;
   color: black;
 }
 
 a:hover {
-  color: #ff47cb;
+  font-style: italic;
+}
+
+h1,
+h2,
+p {
+  font-family: novecento-sans-narrow, sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 .quote {
@@ -41,12 +34,6 @@ a:hover {
 img {
   width: 100%;
   border-radius: 1em;
-}
-
-.logo {
-  width: 3em;
-  height: 100%;
-  border-radius: 0px;
 }
 
 .flex-container-center {

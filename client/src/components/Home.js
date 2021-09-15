@@ -6,9 +6,7 @@ export function Home() {
       <div className="flex-container">
         <div className="flex-item-left">
           <p>
-            <Link to="/journey" className="pLinks">
-              link example
-            </Link>
+            <Link to="/journey">link example</Link>
           </p>
         </div>
         <div className="flex-item-right"></div>
