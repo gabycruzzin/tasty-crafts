@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./css/App.css";
 import AppNavbar from "./components/AppNavbar";
 import { Journey } from "./components/Journey";
@@ -12,12 +12,17 @@ export default function App() {
       </header>
       <main>
         <div className="container">
-          <div id="home">
-            <Home />
-          </div>
-          <div id="journey">
-            <Journey />
-          </div>
+          <Switch>
+            <Route path="/customservices">
+              <Journey />
+            </Route>
+            <Route path="/shop">
+              <Home />
+            </Route>
+            <Route path="/">
+              <p>homeee</p>
+            </Route>
+          </Switch>
         </div>
       </main>
       <footer>

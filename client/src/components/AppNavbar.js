@@ -7,6 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,11 +53,15 @@ export default function AppNavbar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Shop</MenuItem>
-            <MenuItem onClick={handleClose}>Custom Services</MenuItem>
+            <Link to="/shop">
+              <MenuItem onClick={handleClose}>Shop</MenuItem>
+            </Link>
+            <Link to="/customservices">
+              <MenuItem onClick={handleClose}>Custom Services</MenuItem>
+            </Link>
           </Menu>
           <Typography variant="h6" className={classes.title}>
-            Tasty Crafts
+            <Link to="/">Tasty Crafts</Link>
           </Typography>
         </Toolbar>
       </AppBar>
