@@ -6,10 +6,12 @@ import { Shop } from "./components/Shop";
 import { Welcome } from "./components/Welcome";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
+import tiledImg from "./img/tiled.jpg";
 
 const useStyles = makeStyles({
   main: {
-    backgroundColor: "pink",
+    backgroundImage: `url(${tiledImg})`,
+    backgroundRepeat: "repeat",
     marginTop: 48,
     height: "80vh",
   },
