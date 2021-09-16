@@ -8,6 +8,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
+import logo from "../img/tclogo.jpg";
+
+const fontSize = "1.75rem";
+const logoSize = "2.25rem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +25,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "learning-curve, sans-serif",
     fontWeight: 400,
     fontStyle: "normal",
-    fontSize: 28,
+    fontSize: fontSize,
+  },
+  img: {
+    borderRadius: "50%",
+    maxHeight: logoSize,
+    maxWidth: logoSize,
   },
 }));
 
@@ -37,7 +46,7 @@ export function AppNavbar() {
   };
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="default">
+      <AppBar position="fixed" color="transparent">
         <Toolbar variant="dense">
           <IconButton
             edge="start"
@@ -67,6 +76,9 @@ export function AppNavbar() {
           <Typography variant="h6" className={classes.title}>
             <Link to="/">Tasty Crafts</Link>
           </Typography>
+          <IconButton aria-label="logo" size="small">
+            <img src={logo} alt="logo" className={classes.img} />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
