@@ -7,22 +7,21 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
+import logo from "../img/tclogo.jpg";
 
 const useStyles = makeStyles({
   root: {
-    top: "40vh",
+    top: "30vh",
     position: "absolute",
+    textAlign: "center",
   },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+  img: {
+    borderRadius: "50%",
+    maxHeight: "10em",
+    maxWidth: "10em",
   },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
+  actions: {
+    justifyContent: "center",
   },
 });
 
@@ -33,13 +32,15 @@ export function Welcome() {
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Card className={classes.root}>
         <CardContent>
+          <img src={logo} alt="logo" className={classes.img} />
+
           <Typography variant="h5">Greetings 🖖</Typography>
           <Typography variant="body1">
             I make cute things such as stationary, stickers, and custom gifts
           </Typography>
           <Typography variant="body2">Check 'em out!</Typography>
         </CardContent>
-        <CardActions>
+        <CardActions className={classes.actions}>
           <Link to="/shop">
             <Button size="small">🛒 Shop</Button>
           </Link>
