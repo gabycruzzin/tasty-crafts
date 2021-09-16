@@ -1,34 +1,44 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./css/App.css";
-import AppNavbar from "./components/AppNavbar";
-import { Journey } from "./components/Journey";
-import { Home } from "./components/Home";
+import { AppNavbar } from "./components/AppNavbar";
+import { CustomServices } from "./components/CustomServices";
+import { Shop } from "./components/Shop";
+import { Welcome } from "./components/Welcome";
+import Container from "@material-ui/core/Container";
+import { makeStyles } from "@material-ui/core/styles";
 
+const useStyles = makeStyles({
+  main: {
+    backgroundColor: "pink",
+    marginTop: 48,
+    height: "80vh",
+  },
+});
 export default function App() {
+  const classes = useStyles();
+
   return (
     <Router>
       <header>
         <AppNavbar />
       </header>
-      <main>
-        <div className="container">
+      <main className={classes.main}>
+        <Container maxWidth="md">
           <Switch>
             <Route path="/customservices">
-              <Journey />
+              <CustomServices />
             </Route>
             <Route path="/shop">
-              <Home />
+              <Shop />
             </Route>
             <Route path="/">
-              <p>homeee</p>
+              <Welcome />
             </Route>
           </Switch>
-        </div>
+        </Container>
       </main>
       <footer>
-        <div className="container">
-          <p>&copy; 2021 Tasty Crafts Co.</p>
-        </div>
+        <p>&copy; 2021 Tasty Crafts Co.</p>
       </footer>
     </Router>
   );
