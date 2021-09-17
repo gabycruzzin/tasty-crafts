@@ -4,27 +4,24 @@ import { AppNavbar } from "./components/AppNavbar";
 import { CustomServices } from "./components/CustomServices";
 import { Shop } from "./components/Shop";
 import { Welcome } from "./components/Welcome";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
+import Container from "@mui/material/Container";
 import tiledImg from "./img/tiled.jpg";
+import Typography from "@mui/material/Typography";
 
-const useStyles = makeStyles({
-  main: {
-    backgroundImage: `url(${tiledImg})`,
-    backgroundRepeat: "repeat",
-    marginTop: 48,
-    height: "80vh",
-  },
-});
 export default function App() {
-  const classes = useStyles();
-
   return (
     <Router>
       <header>
         <AppNavbar />
       </header>
-      <main className={classes.main}>
+      <main
+        style={{
+          backgroundImage: `url(${tiledImg})`,
+          backgroundRepeat: "repeat",
+          marginTop: 48,
+          height: "80vh",
+        }}
+      >
         <Container maxWidth="md">
           <Switch>
             <Route path="/customservices">
@@ -40,7 +37,9 @@ export default function App() {
         </Container>
       </main>
       <footer>
-        <p>&copy; 2021 Tasty Crafts Co.</p>
+        <Typography variant="overline" sx={{ margin: "1rem" }}>
+          &copy; 2021 Tasty Crafts Co.
+        </Typography>
       </footer>
     </Router>
   );

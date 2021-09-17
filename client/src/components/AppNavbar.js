@@ -1,41 +1,20 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import logo from "../img/tclogo.jpg";
+import Box from "@mui/material/Box";
+import { useHistory } from "react-router-dom";
 
 const fontSize = "1.75rem";
 const logoSize = "2.25rem";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-    fontFamily: "learning-curve, sans-serif",
-    fontWeight: 400,
-    fontStyle: "normal",
-    fontSize: fontSize,
-  },
-  img: {
-    borderRadius: "50%",
-    maxHeight: logoSize,
-    maxWidth: logoSize,
-  },
-}));
-
 export function AppNavbar() {
-  const classes = useStyles();
+  const history = useHistory();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -45,16 +24,15 @@ export function AppNavbar() {
     setAnchorEl(null);
   };
   return (
-    <div className={classes.root}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="transparent">
         <Toolbar variant="dense">
           <IconButton
+            size="large"
             edge="start"
-            className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-            aria-controls="simple-menu"
-            aria-haspopup="true"
+            sx={{ mr: 2 }}
             onClick={handleClick}
           >
             <MenuIcon />
@@ -73,14 +51,35 @@ export function AppNavbar() {
               <MenuItem onClick={handleClose}>Custom Services</MenuItem>
             </Link>
           </Menu>
-          <Typography variant="h6" className={classes.title}>
+          <Box
+            sx={{
+              typography: "h6",
+              flexGrow: 1,
+              fontFamily: "learning-curve, sans-serif",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontSize: fontSize,
+            }}
+          >
             <Link to="/">Tasty Crafts</Link>
-          </Typography>
-          <IconButton aria-label="logo" size="small">
-            <img src={logo} alt="logo" className={classes.img} />
+          </Box>
+          <IconButton
+            aria-label="logo"
+            size="small"
+            onClick={() => history.push("/")}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              style={{
+                borderRadius: "50%",
+                maxHeight: logoSize,
+                maxWidth: logoSize,
+              }}
+            />
           </IconButton>
         </Toolbar>
       </AppBar>
-    </div>
+    </Box>
   );
 }
