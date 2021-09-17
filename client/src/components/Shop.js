@@ -4,6 +4,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import { ShopItem } from "./ShopItem";
 
 export function Shop() {
   const theme = useTheme();
@@ -30,24 +31,20 @@ export function Shop() {
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            padding: 1,
-            margin: 1,
+            padding: "1rem",
           }}
         >
-          <Box
-            sx={{ padding: 1, border: "grey 1px solid", flex: flexPercentage }}
-          >
-            Item 1
+          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
+            <ShopItem />
           </Box>
-          <Box
-            sx={{ padding: 1, border: "grey 1px solid", flex: flexPercentage }}
-          >
-            Item 2
+          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
+            <ShopItem />
           </Box>
-          <Box
-            sx={{ padding: 1, border: "grey 1px solid", flex: flexPercentage }}
-          >
-            Item 3
+          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
+            <ShopItem />
+          </Box>
+          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
+            <ShopItem />
           </Box>
         </Box>
       </Paper>
