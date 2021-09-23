@@ -63,7 +63,10 @@ export function Shop() {
         >
           {shopItems.map((item) => {
             return (
-              <Box sx={{ padding: "1rem", width: widthPercentage }}>
+              <Box
+                key={item.item_number}
+                sx={{ padding: "1rem", width: widthPercentage }}
+              >
                 <ShopItem item={item} />
               </Box>
             );
