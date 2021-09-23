@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { ShopItem } from "./ShopItem";
+import Divider from "@mui/material/Divider";
 
 export function Shop() {
   const theme = useTheme();
@@ -13,17 +14,32 @@ export function Shop() {
 
   return (
     <>
-      <Typography
-        variant="h2"
-        component="div"
+      <Divider
         sx={{
-          textAlign: "center",
-          padding: "1rem",
-          color: "white",
+          "&.MuiDivider-root": {
+            "&::before": {
+              borderTopColor: "white",
+            },
+            "&::after": {
+              borderTopColor: "white",
+            },
+          },
         }}
       >
-        Shop
-      </Typography>
+        <Typography
+          variant="h1"
+          sx={{
+            fontFamily: "learning-curve, sans-serif",
+            fontWeight: 400,
+            fontStyle: "normal",
+            textAlign: "center",
+            padding: "1rem",
+            color: "white",
+          }}
+        >
+          Shop
+        </Typography>
+      </Divider>
       <Paper>
         <Typography
           variant="subtitle2"

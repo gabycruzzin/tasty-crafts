@@ -6,3 +6,22 @@ a {
 a:hover {
   font-style: italic;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #af7e56;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f1f1;
+}

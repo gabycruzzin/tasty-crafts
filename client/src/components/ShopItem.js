@@ -1,6 +1,6 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
-import pic from "../img/2.jpg";
+import pic from "../img/998277446.jpg";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 
@@ -11,7 +11,7 @@ export function ShopItem() {
         src={pic}
         alt="pic"
         style={{
-          borderRadius: "1rem",
+          borderRadius: "0.5rem",
           width: "100%",
         }}
       />
