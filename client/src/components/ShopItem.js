@@ -7,10 +7,6 @@ import Stack from "@mui/material/Stack";
 export function ShopItem() {
   return (
     <>
-      <Typography variant="h6" component="div" gutterBottom>
-        Back to School Sticker Sheet | Set of 12 | Bullet Journal Stickers,
-        Planner Stickers, Scrapbook Stickers, Journal Stickers, Cute Stickers
-      </Typography>
       <img
         src={pic}
         alt="pic"
@@ -19,8 +15,14 @@ export function ShopItem() {
           width: "100%",
         }}
       />
+      <Typography variant="h6" component="div" gutterBottom>
+        Back to School Sticker Sheet | Set of 12 | Bullet Journal Stickers,
+        Planner Stickers, Scrapbook Stickers, Journal Stickers, Cute Stickers
+      </Typography>
       <Stack direction="row" spacing={1} justifyContent="space-between">
-        <Typography variant="h6">$3.99</Typography>
+        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+          $3.99
+        </Typography>
         <Chip
           label="Free Shipping"
           color="success"

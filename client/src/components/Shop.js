@@ -25,11 +25,23 @@ export function Shop() {
         Shop
       </Typography>
       <Paper>
+        <Typography
+          variant="subtitle2"
+          color="text.secondary"
+          sx={{
+            paddingTop: "1rem",
+            paddingRight: "1rem",
+            textAlign: "right",
+          }}
+        >
+          Displaying 4 items
+        </Typography>
         <Box
           sx={{
             display: "flex",
             flexWrap: "wrap",
             padding: "1rem",
+            margin: "1rem",
           }}
         >
           <Box sx={{ padding: "1rem", flex: flexPercentage }}>

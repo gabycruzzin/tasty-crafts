@@ -20,6 +20,7 @@ export default function App() {
           backgroundRepeat: "repeat",
           marginTop: 48,
           height: "80vh",
+          overflowY: "auto",
         }}
       >
         <Container maxWidth="md">
