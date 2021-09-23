@@ -4,7 +4,7 @@ import pic from "../img/998277446.jpg";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 
-export function ShopItem() {
+export function ShopItem({ item }) {
   return (
     <>
       <img
@@ -16,12 +16,11 @@ export function ShopItem() {
         }}
       />
       <Typography variant="h6" component="div" gutterBottom>
-        Back to School Sticker Sheet | Set of 12 | Bullet Journal Stickers,
-        Planner Stickers, Scrapbook Stickers, Journal Stickers, Cute Stickers
+        {item.title}
       </Typography>
       <Stack direction="row" spacing={1} justifyContent="space-between">
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-          $3.99
+          ${item.price}
         </Typography>
         <Chip
           label="Free Shipping"

@@ -6,11 +6,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { ShopItem } from "./ShopItem";
 import Divider from "@mui/material/Divider";
+import shopItems from "../data/items.json";
 
 export function Shop() {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("md"));
-  const flexPercentage = isSmall ? "100%" : "50%";
+  const widthPercentage = isSmall ? "100%" : "50%";
 
   return (
     <>
@@ -50,7 +51,7 @@ export function Shop() {
             textAlign: "right",
           }}
         >
-          Displaying 4 items
+          Displaying {shopItems.length} item(s)
         </Typography>
         <Box
           sx={{
@@ -60,18 +61,13 @@ export function Shop() {
             margin: "1rem",
           }}
         >
-          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
-            <ShopItem />
-          </Box>
-          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
-            <ShopItem />
-          </Box>
-          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
-            <ShopItem />
-          </Box>
-          <Box sx={{ padding: "1rem", flex: flexPercentage }}>
-            <ShopItem />
-          </Box>
+          {shopItems.map((item) => {
+            return (
+              <Box sx={{ padding: "1rem", width: widthPercentage }}>
+                <ShopItem item={item} />
+              </Box>
+            );
+          })}
         </Box>
       </Paper>
     </>
