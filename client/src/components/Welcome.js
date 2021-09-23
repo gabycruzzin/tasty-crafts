@@ -24,8 +24,9 @@ export function Welcome() {
         <Card>
           <CardContent>
             <Typography variant="h5">Greetings 🖖</Typography>
-            <Typography variant="body1">
-              I make cute things such as stationery, stickers, and custom gifts.
+            <Typography variant="body1" gutterBottom>
+              I make handmade gifts that include stickers, stationery, and
+              custom signs
             </Typography>
             <Typography variant="body2">Check 'em out!</Typography>
           </CardContent>

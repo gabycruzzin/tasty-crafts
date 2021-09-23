@@ -16,12 +16,10 @@ export function Shop() {
       <Typography
         variant="h2"
         component="div"
-        gutterBottom
         sx={{
           textAlign: "center",
           padding: "1rem",
           color: "white",
-          letterSpacing: 6,
         }}
       >
         Shop
