@@ -32,42 +32,79 @@ export function ItemDetails() {
         <Typography variant="h6" gutterBottom>
           {item.title}
         </Typography>
-        <Stack direction="row" spacing={1} justifyContent="space-between">
+        <Stack direction="row" justifyContent="space-between">
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             ${item.price}
           </Typography>
           <Chip label="Free Shipping" color="success" size="small" />
         </Stack>
-        <Typography
-          variant="subtitle1"
-          sx={{ whiteSpace: "pre-wrap" }}
-          gutterBottom
-        >
-          {item.description}
-        </Typography>
-        <Typography variant="overline" gutterBottom>
-          Details
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{ whiteSpace: "pre-wrap" }}
-          gutterBottom
-        >
-          {item.details}
-        </Typography>
-        <Typography variant="overline" gutterBottom>
-          Shipping Info
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{ whiteSpace: "pre-wrap" }}
-          gutterBottom
-        >
-          {item.shipping}
-        </Typography>
+        <br />
+        <Stack direction="row" justifyContent="space-between">
+          <div style={{ width: "70%", paddingRight: "1em" }}>
+            <Typography
+              variant="subtitle1"
+              sx={{ whiteSpace: "pre-wrap" }}
+              gutterBottom
+            >
+              {item.description}
+            </Typography>
+            <Typography variant="overline" gutterBottom>
+              Details
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ whiteSpace: "pre-wrap" }}
+              gutterBottom
+            >
+              {item.details}
+            </Typography>
+            <Typography variant="overline" gutterBottom>
+              Shipping Info
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ whiteSpace: "pre-wrap" }}
+              gutterBottom
+            >
+              {item.shipping}
+            </Typography>
+          </div>
+
+          <div style={{ width: "30%" }}>
+            <Typography variant="overline" gutterBottom>
+              Processing Time
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {item.processing_time}
+            </Typography>
+            <Typography variant="overline" gutterBottom>
+              Height
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {item.height}
+            </Typography>
+            <Typography variant="overline" gutterBottom>
+              Width
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {item.width}
+            </Typography>
+            <Typography variant="overline" gutterBottom>
+              Materials
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {item.materials}
+            </Typography>
+          </div>
+        </Stack>
+        <br />
         <Stack direction="row" justifyContent="center" alignItems="center">
-          <Button variant="contained" size="large" endIcon={<ExitToApp />}>
-            View on Etsy!
+          <Button
+            variant="contained"
+            endIcon={<ExitToApp />}
+            onClick={() => (window.location.href = `${item.etsy_link}`)}
+          >
+            Buy on Etsy!
           </Button>
         </Stack>
       </Box>
