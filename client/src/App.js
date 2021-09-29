@@ -7,7 +7,6 @@ import { Welcome } from "./components/Welcome";
 import Container from "@mui/material/Container";
 import tiledImg from "./img/tiled.jpg";
 import Typography from "@mui/material/Typography";
-import { ItemDetails } from "./components/ItemDetails";
 
 export default function App() {
   return (
@@ -28,7 +27,6 @@ export default function App() {
           <Switch>
             <Route exact path="/customservices" component={CustomServices} />
             <Route exact path="/shop" component={Shop} />
-            <Route exact path="/shop/:id" component={ItemDetails} />
             <Route exact path="/" component={Welcome} />
           </Switch>
         </Container>
