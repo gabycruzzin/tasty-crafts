@@ -48,7 +48,7 @@ export function AppNavbar() {
               <MenuItem onClick={handleClose}>Shop</MenuItem>
             </Link>
             <Link to="/customservices">
-              <MenuItem onClick={handleClose}>Custom Services</MenuItem>
+              <MenuItem onClick={handleClose}>Custom Gifts</MenuItem>
             </Link>
           </Menu>
           <Box
