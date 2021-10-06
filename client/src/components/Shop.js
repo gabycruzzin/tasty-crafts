@@ -65,7 +65,7 @@ export function Shop() {
             return (
               <Box
                 key={item.item_number}
-                sx={{ padding: "1rem", width: widthPercentage }}
+                sx={{ padding: "3rem 1rem", width: widthPercentage }}
               >
                 <ShopItem item={item} />
               </Box>
