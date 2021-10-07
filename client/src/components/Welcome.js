@@ -7,38 +7,47 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useHistory } from "react-router-dom";
 import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 export function Welcome() {
   const history = useHistory();
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("md"));
+  const widthPercentage = isSmall ? "90%" : "50%";
+  const topvh = isSmall ? "20vh" : "30vh";
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <Box
         sx={{
-          top: "30vh",
+          top: topvh,
           position: "absolute",
           textAlign: "center",
-          maxWidth: 300,
+          width: widthPercentage,
         }}
       >
         <Card>
           <CardContent>
-            <Typography variant="h5">Greetings 🖖</Typography>
+            <Typography variant="h4">Greetings 🖖</Typography>
+            <Typography variant="h5">
+              Welcome to the Tasty Crafts Shop!
+            </Typography>
             <Typography variant="body1" gutterBottom>
-              I make handmade gifts that include stickers, stationery, and
-              custom signs
+              I make handmade, quality stickers from my original designs and
+              sell them on Etsy. More to come in 2022. 😃
             </Typography>
             <Typography variant="body2">Check 'em out!</Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
             <Button size="small" onClick={() => history.push("/shop")}>
-              🛒 Shop
+              🛒 Sticker Shop
             </Button>
             <Button
               size="small"
               onClick={() => history.push("/customservices")}
             >
-              🔨 Custom Services
+              🔨 Custom Gifts
             </Button>
           </CardActions>
         </Card>
