@@ -6,15 +6,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import logo from "../img/tclogo.jpg";
+import IG from "../img/ig.jpg";
 import Box from "@mui/material/Box";
-import { useHistory } from "react-router-dom";
 
 const fontSize = "1.75rem";
 const logoSize = "2.25rem";
 
 export function AppNavbar() {
-  const history = useHistory();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -66,10 +64,13 @@ export function AppNavbar() {
           <IconButton
             aria-label="logo"
             size="small"
-            onClick={() => history.push("/")}
+            onClick={() =>
+              (window.location.href =
+                "https://www.instagram.com/tastycraftsco/")
+            }
           >
             <img
-              src={logo}
+              src={IG}
               alt="logo"
               style={{
                 borderRadius: "50%",
