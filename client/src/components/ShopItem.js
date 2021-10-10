@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import ExitToApp from "@mui/icons-material/ExitToApp";
+import DownloadIcon from "@mui/icons-material/Download";
 import Button from "@mui/material/Button";
 
 export function ShopItem({ item }) {
@@ -20,7 +21,11 @@ export function ShopItem({ item }) {
           }}
         />
         <div style={{ position: "absolute", top: "-1rem", right: "-1rem" }}>
-          <Chip label="Free Shipping" color="success" />
+          {item.type === "DIGITAL_ITEM" && item.price === "0" ? (
+            <Chip label="Free Download" color="success" />
+          ) : (
+            <Chip label="Free Shipping" color="success" />
+          )}
         </div>
       </div>
       <Typography variant="h6" gutterBottom>
@@ -30,13 +35,23 @@ export function ShopItem({ item }) {
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
           ${item.price}
         </Typography>
-        <Button
-          variant="contained"
-          endIcon={<ExitToApp />}
-          onClick={() => (window.location.href = `${item.etsy_link}`)}
-        >
-          Etsy
-        </Button>
+        {item.type === "PHYSICAL_ITEM" ? (
+          <Button
+            variant="contained"
+            endIcon={<ExitToApp />}
+            onClick={() => (window.location.href = `${item.etsy_link}`)}
+          >
+            Etsy
+          </Button>
+        ) : (
+          <Button
+            variant="contained"
+            endIcon={<DownloadIcon />}
+            onClick={() => (window.location.href = `${item.etsy_link}`)}
+          >
+            Download
+          </Button>
+        )}
       </Stack>
     </>
   );
