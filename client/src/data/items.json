@@ -1,6 +1,7 @@
 [
   {
     "title": "Back to School Sticker Sheet | Set of 12 | Bullet Journal Stickers, Planner Stickers, Scrapbook Stickers, Journal Stickers, Cute Stickers",
+    "item_number": 1,
     "price": "3.99",
     "etsy_link": "https://www.etsy.com/listing/998277446/back-to-school-sticker-sheet-set-of-12",
     "image": "998277446.jpg",
@@ -8,6 +9,7 @@
   },
   {
     "title": "Squash Goals | Pumpkin Halloween Sticker | Glossy & Weatherproof | Journal Sticker, Planner Sticker, Laptop Sticker, Hydroflask Sticker",
+    "item_number": 2,
     "price": "1.50",
     "etsy_link": "https://www.etsy.com/listing/1081347682/squash-goals-pumpkin-halloween-sticker",
     "image": "1081347682.jpg",
@@ -15,6 +17,7 @@
   },
   {
     "title": "Web Designer | Spooky Halloween Sticker | Glossy & Weatherproof | Journal Sticker, Planner Sticker, Laptop Sticker, Hydroflask Sticker",
+    "item_number": 3,
     "price": "1.50",
     "etsy_link": "https://www.etsy.com/listing/1081927626/web-designer-spooky-halloween-sticker",
     "image": "1081927626.jpg",
@@ -22,6 +25,7 @@
   },
   {
     "title": "Squash Goals | Phone Wallpaper | Dark Theme",
+    "item_number": 4,
     "price": "0",
     "etsy_link": "",
     "image": "squashgoals_dark.jpg",
@@ -29,6 +33,7 @@
   },
   {
     "title": "Squash Goals | Phone Wallpaper | Medium Theme",
+    "item_number": 5,
     "price": "0",
     "etsy_link": "",
     "image": "squashgoals_medium.jpg",
@@ -36,6 +41,7 @@
   },
   {
     "title": "Squash Goals | Phone Wallpaper | Light Theme",
+    "item_number": 6,
     "price": "0",
     "etsy_link": "",
     "image": "squashgoals_light.jpg",

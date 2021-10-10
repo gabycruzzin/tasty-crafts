@@ -44,13 +44,11 @@ export function ShopItem({ item }) {
             Etsy
           </Button>
         ) : (
-          <Button
-            variant="contained"
-            endIcon={<DownloadIcon />}
-            onClick={() => (window.location.href = `${item.etsy_link}`)}
-          >
-            Download
-          </Button>
+          <a href={imagePath.default} download>
+            <Button variant="contained" endIcon={<DownloadIcon />}>
+              Download
+            </Button>
+          </a>
         )}
       </Stack>
     </>
