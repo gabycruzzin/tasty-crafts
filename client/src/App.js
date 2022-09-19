@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/App.css";
 import { AppNavbar } from "./components/AppNavbar";
 import { CustomServices } from "./components/CustomServices";
@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <header>
         <AppNavbar />
       </header>
@@ -24,11 +24,11 @@ export default function App() {
         }}
       >
         <Container maxWidth="md">
-          <Switch>
-            <Route exact path="/customservices" component={CustomServices} />
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path="/" component={Welcome} />
-          </Switch>
+          <Routes>
+            <Route exact path="/customservices" element={<CustomServices />} />
+            <Route exact path="/shop" element={<Shop />} />
+            <Route exact path="/" element={<Welcome />} />
+          </Routes>
         </Container>
       </main>
       <footer>
@@ -36,6 +36,6 @@ export default function App() {
           &copy; 2021 Tasty Crafts Co.
         </Typography>
       </footer>
-    </Router>
+    </BrowserRouter>
   );
 }

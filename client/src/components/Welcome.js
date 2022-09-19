@@ -5,13 +5,13 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
 export function Welcome() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("md"));
   const widthPercentage = isSmall ? "90%" : "50%";
@@ -40,12 +40,12 @@ export function Welcome() {
             <Typography variant="body2">Check 'em out!</Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
-            <Button size="small" onClick={() => history.push("/shop")}>
+            <Button size="small" onClick={() => navigate("/shop")}>
               🛒 Sticker Shop
             </Button>
             <Button
               size="small"
-              onClick={() => history.push("/customservices")}
+              onClick={() => navigate("/customservices")}
             >
               🔨 Custom Gifts
             </Button>
