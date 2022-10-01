@@ -31,24 +31,28 @@ export function Welcome() {
           <CardContent>
             <Typography variant="h4">Greetings 🖖</Typography>
             <Typography variant="h5">
-              Welcome to the Tasty Crafts Shop!
+              Welcome to Tasty Crafts!
             </Typography>
             <Typography variant="body1" gutterBottom>
-              I make handmade, quality stickers from my original designs and
-              sell them on Etsy. More to come in 2022. 😃
+              I create custom chalkboard signs for weddings, bridal showers, coffee shops, or any other signage need you may have :)
             </Typography>
-            <Typography variant="body2">Check 'em out!</Typography>
           </CardContent>
           <CardActions sx={{ justifyContent: "center" }}>
             <Button size="small" onClick={() => navigate("/shop")}>
-              🛒 Sticker Shop
+              Checkout my work
             </Button>
             <Button
               size="small"
               onClick={() => navigate("/customservices")}
             >
-              🔨 Custom Gifts
+              FAQ
             </Button>
+            <Button
+              size="small"
+              onClick={() => navigate("/customservices")}
+            >
+              Contact me
+            </Button>        
           </CardActions>
         </Card>
       </Box>
