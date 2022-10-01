@@ -51,7 +51,7 @@ export function Welcome() {
               size="small"
               onClick={() => navigate("/customservices")}
             >
-              Contact me
+              Contact me!
             </Button>        
           </CardActions>
         </Card>
